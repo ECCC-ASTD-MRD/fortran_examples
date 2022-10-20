@@ -54,10 +54,10 @@ end program
 subroutine f_passthru(ptr, low, high) BIND(C,name='F_passthru')
   use ISO_C_BINDING
   implicit none
-  type(C_PTR), intent(IN), value :: ptr                   ! base address of data array
-  integer(C_INT32_T), intent(IN), value :: low, high      ! lower and upper bounds for data array
-  integer, dimension(:), pointer :: array1, array2, array3
-  integer(C_INTPTR_T) :: address
+  type(C_PTR), intent(IN), value :: ptr                    ! base address of data array
+  integer(C_INT32_T), intent(IN), value :: low, high       ! lower and upper bounds for data array
+  integer, dimension(:), pointer :: array1, array2, array3 ! integer, rank 1 arrays
+  integer(C_INTPTR_T) :: address                           ! integer large enough to contain an address
 
   ! array1 will have a lower index bound of 1
   call c_f_pointer(ptr, array1, [high-low+1])      ! make Fortran pointer from C pointer
