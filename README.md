@@ -1,11 +1,10 @@
 
-these sample codes hve been compiled and run with multiple Fortran compilers on an x86 platform
-  gfortran
-  ifort (Intel oneapi)
-  flang (traditional, from aocc 3.2.0)
-  flang-new (llvm 15)
-  nvfortran (PGI/Nvidia)
+these sample codes have been compiled and run with many Fortran compilers on an x86 platform
+- gfortran (various versions 9.x thru 12.x)
+- ifort (Intel oneapi 2021.5)
+- flang (traditional, aocc 3.2.0)
+- nvfortran (PGI/Nvidia, 22.x)
 
-main code contributors
-  Samuel Gilbert
-  Michel Valin
+main code contributors :
+- Samuel Gilbert
+- Michel Valin
