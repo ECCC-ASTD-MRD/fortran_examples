@@ -1,4 +1,7 @@
 ! ignore type/kind/rank
+!
+! make  FC=my_fortran_compiler example_008
+! make  FC=ifort example_008
 subroutine demo
   implicit none
   interface

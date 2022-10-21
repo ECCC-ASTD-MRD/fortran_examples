@@ -1,5 +1,9 @@
 ! examples of pointer manipulations (LOC/C_LOC/TRANSFER) (including non unit stride)
 ! example of array constructor with implied do loop
+!
+! make  FC=my_fortran_compiler example_004
+! make  FC=ifort example_004
+! make  FC=my_fortran_compiler example_004 -DERROR_1
 program demo
   use ISO_C_BINDING
   implicit none

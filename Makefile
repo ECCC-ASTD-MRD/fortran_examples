@@ -1,7 +1,11 @@
 
 CC = gcc
 CFLAGS =
+ifeq (${FTN},)
+FC = gfortran
+else
 FC = ${FTN}
+endif
 FFLAGS =
 DEFINES =
 

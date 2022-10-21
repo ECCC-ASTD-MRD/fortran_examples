@@ -1,5 +1,8 @@
 ! example of allocatable strings and string pointers
 ! this example shows that allocatable and pointer induce a different behaviour
+!
+! make  FC=my_fortran_compiler example_005
+! make  FC=ifort example_005
 module machin
 contains
 
