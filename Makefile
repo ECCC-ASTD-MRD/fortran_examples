@@ -30,6 +30,10 @@ example_005:	example_005.F90
 	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod
 
+example_006:	example_006.F90
+	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
 example_008:	example_008.F90
 	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod
