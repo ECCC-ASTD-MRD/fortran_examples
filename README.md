@@ -5,10 +5,6 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - flang (traditional, aocc 3.2.0)  
 - nvfortran (PGI/Nvidia, 22.x)  
 
-main code contributors :  
-- Samuel Gilbert  
-- Michel Valin  
-
 #### Sample files
 - example_001.F90 :  
 . generic interfaces in a module  
@@ -24,7 +20,8 @@ main code contributors :
 . LOC() / C\_LOC()  
 . Fortran pointer manipulations (including non unit stride)  
 . TRANSFER  
-. array constructor with implied do loop
+. array constructor with implied do loop  
+. Fortran -> C -> Fortran pass through
 
 - example_005.F90 :  
 . allocatable strings and string pointers
@@ -35,3 +32,8 @@ main code contributors :
 - example_008.F90 :  
 . ignore type/kind/rank
 
+
+#### Contributors
+main code contributors :  
+- Samuel Gilbert (RPN)  
+- Michel Valin  (RPN)  
