@@ -90,9 +90,9 @@ program self_test
   implicit none
   call subd
   entier = 123        ! entier is public  in module demo
+  call sube           ! will print entier with the value set here
 #if defined(ERROR_1)
   reel = 1.23         ! reel is private in module demo, this would be a syntax error
 #endif
-  call sube           ! will print entier with the value set here
-  call print_reel
+  call print_reel     ! will be able to print reel because print_reel belongs to the module
 end program
