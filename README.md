@@ -29,6 +29,9 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_006.F90 :  
 . write within write side effects
 
+- example_007.F90 :  
+. ambiguous code and side effects
+
 - example_008.F90 :  
 . ignore type/kind/rank
 
