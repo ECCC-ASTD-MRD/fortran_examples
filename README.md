@@ -39,9 +39,12 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 . Fortran pointer manipulation  
 . looking inside Fortran pointers
 
-- example_010.F90 :  
-. pointer conversion templates (c_f_pointer `a la Fortran 202x)  
+- example_010.fpp :  
+. pointer conversion templates (c_f_pointer à la Fortran 202x)  
 . uses fypp preprocessor
+
+- example_011.F90 :  
+. elemental functions in Fortran
 
 
 #### Contributors

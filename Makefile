@@ -34,6 +34,10 @@ example_006:	example_006.F90
 	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod
 
+example_007:	example_007.F90
+	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
 example_008:	example_008.F90
 	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod
@@ -46,6 +50,10 @@ example_010:	example_010.fpp
 	bin/fypp -F example_010.fpp example_010.F90
 	${FC} ${FFLAGS} ${DEF} example_010.F90 -o example_010.exe && ./$@.exe
 	rm -f $@.exe *.mod example_010.F90
+
+example_011:	example_011.F90
+	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
 
 clean:
 	rm -f *.o *.mod *.exe a.out
