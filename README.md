@@ -35,6 +35,10 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_008.F90 :  
 . ignore type/kind/rank
 
+- example_009.F90 :  
+. Fortran pointer manipulation  
+. looking inside Fortran pointers
+
 - example_010.F90 :  
 . pointer conversion templates (c_f_pointer `a la Fortran 202x)  
 . uses fypp preprocessor
