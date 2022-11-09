@@ -1,4 +1,4 @@
-! pointer manipulation
+! Fortran pointer manipulation
 ! dumping contents of Fortran pointers
 ! show that pointer size = base amount + fixed amount per dimansion
 ! exception : a pointer to a scalar seems to contain only its address

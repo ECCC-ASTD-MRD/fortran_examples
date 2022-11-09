@@ -46,6 +46,9 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_011.F90 :  
 . elemental functions in Fortran
 
+- example_012.F90 :  
+. generic interfaces use a strict interface signature
+
 
 #### Contributors
 main code contributors :  
