@@ -55,5 +55,6 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 
 #### Contributors
 main code contributors :  
+- Philippe Carphin  (RPN-SI)  
 - Samuel Gilbert (RPN-SI)  
 - Michel Valin  (RPN-SI)  
