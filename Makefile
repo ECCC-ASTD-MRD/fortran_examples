@@ -1,12 +1,14 @@
 
 CC = gcc
 CFLAGS =
+ifeq (${FC},f77)
 ifeq (${FTN},)
 FC = gfortran
 else
 FC = ${FTN}
 endif
-FFLAGS =
+endif
+FFLAGS = ${FFLAGS_EXTRA}
 DEFINES =
 
 example_001:	example_001.F90
@@ -53,6 +55,15 @@ example_010:	example_010.fpp
 
 example_011:	example_011.F90
 	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
+example_012:	example_012.F90
+	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
+example_013:	example_013.F90 example_013_c.c
+	${CC} -c example_013_c.c
+	${FC} ${FFLAGS} ${DEF} example_013.F90 example_013_c.o -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod
 
 clean:

@@ -49,6 +49,9 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_012.F90 :  
 . generic interfaces use a strict interface signature
 
+- example_013.F90 :  
+. passing a Fortran string to a C function (side effects)
+
 
 #### Contributors
 main code contributors :  
