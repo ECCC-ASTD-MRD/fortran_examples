@@ -4,6 +4,7 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - ifort (Intel oneapi 2021.5)  
 - flang (traditional, aocc 3.2.0)  
 - nvfortran (PGI/Nvidia, 22.x)  
+- flang-new (llvm, 15.0.5)  
 
 #### Sample files
 - example_001.F90 :  
