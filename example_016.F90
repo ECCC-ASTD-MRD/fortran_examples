@@ -27,11 +27,15 @@ contains
     print *,'finalizing elastic_allocatable type'
     if(allocated(this%item_1d)) then
       deallocate(this%item_1d)
-      print *,'allocatable item_1d deallocated'
+      print *,'allocatable component item_1d deallocated'
+    else
+      print *,'no need to deallocate allocatable component item_1d'
     endif
     if(allocated(this%item_2d)) then
       deallocate(this%item_2d)
-      print *,'allocatable item_2d deallocated'
+      print *,'allocatable component item_2d deallocated'
+    else
+      print *,'no need to deallocate allocatable component item_2d'
     endif
   end subroutine
 
@@ -40,11 +44,15 @@ contains
     print *,'finalizing elastic_pointer type'
     if(associated(this%item_1d)) then
       deallocate(this%item_1d)
-      print *,'pointer item_1d deallocated'
+      print *,'pointer component item_1d deallocated'
+    else
+      print *,'no need to deallocate pointer component item_1d'
     endif
     if(associated(this%item_2d)) then
       deallocate(this%item_2d)
-      print *,'pointer item_2d deallocated'
+      print *,'pointer component item_2d deallocated'
+    else
+      print *,'no need to deallocate pointer component item_2d'
     endif
   end subroutine
 end module
@@ -63,7 +71,9 @@ end program
 subroutine sub_block
   use module_016
   implicit none
-  ! type finalization in block does not always work
+  type(elastic_allocatable) :: item1
+  type(elastic_pointer) :: item3
+  ! type finalization in block does not always work the same way wirth all compilers
   print *,'entering block'
   block
     type(elastic_pointer) :: item1
@@ -75,13 +85,15 @@ subroutine sub_block
     print *,'item2%item_1d =', item2%item_1d
   end block
   print *,'exited block'
+  item1%item_1d = [1]
+  print *,'exiting sub_block'
 end subroutine
 
 subroutine sub1
   use module_016
   implicit none
-  type(elastic_allocatable) :: item1, item2
-  type(elastic_pointer) :: item3, item4
+  type(elastic_allocatable) :: item1
+  type(elastic_pointer) :: item3
   integer :: i
   integer, dimension(5)   :: a1
   integer, dimension(2,3) :: a2
@@ -114,15 +126,16 @@ subroutine sub1
     print *,'item3%item_1d is not yet associated'
   endif
 
-! when this subroutine returns, item1, item2, item3, item4 will become "out of scope"
+  print *,'exiting sub1'
+! when this subroutine returns, item1, item3 will become "out of scope"
 
 end subroutine
 
 subroutine sub2
   use module_016
   implicit none
-  type(elastic_allocatable) :: item1, item2
-  type(elastic_pointer) :: item3, item4
+  type(elastic_allocatable) :: item2
+  type(elastic_pointer) :: item4
   integer :: i
   integer, dimension(5)   :: a1
   integer, dimension(2,3) :: a2
@@ -161,6 +174,7 @@ subroutine sub2
     print *,'item4%item_2d is not yet associated'
   endif
 
-! when this subroutine returns, item1, item2, item3, item4 will become "out of scope"
+  print *,'exiting sub1'
+! when this subroutine returns, item2, item4 will become "out of scope"
 
 end subroutine
