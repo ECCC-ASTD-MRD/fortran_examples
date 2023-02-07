@@ -57,7 +57,7 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 . ____
 
 - example_015.F90 :  
-. ____
+. transfer data between C interoperable character(C_CHAR), dimension(nc1) and Fortran string character(len=nc2)
 
 - example_015.F90 :  
 . gymnastics with allocatable arrays
