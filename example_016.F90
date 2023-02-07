@@ -1,11 +1,5 @@
 ! gymnastics with allocatable arrays
-program example_016
-  implicit none
-  call sub1
-  print *,'=================================='
-  call sub2
-  stop
-end program
+! demonstrate the use of a finalization clause in a user defined type
 
 module module_016
   implicit none
@@ -15,14 +9,15 @@ module module_016
     integer, dimension(:),   allocatable :: item_1d
     integer, dimension(:,:), allocatable :: item_2d
   contains
-    final :: destruct_elastic_allocatable
+    final :: destruct_elastic_allocatable  ! will be called when getting "out of scope"
   end type
 
+  ! initialization in type definition necessary for associated() to work reliably
   type :: elastic_pointer
     integer, dimension(:),   pointer :: item_1d => NULL()  ! type initialization
     integer, dimension(:,:), pointer :: item_2d => NULL()  ! type initialization
   contains
-    final :: destruct_elastic_pointer
+    final :: destruct_elastic_pointer  ! will be called when getting "out of scope"
   end type
 
 contains
@@ -53,6 +48,34 @@ contains
     endif
   end subroutine
 end module
+
+program example_016
+  implicit none
+  call sub1
+  print *,'=================================='
+  call sub2
+  print *,'=================================='
+  call sub_block
+  print *,'=================================='
+  stop
+end program
+
+subroutine sub_block
+  use module_016
+  implicit none
+  ! type finalization in block does not always work
+  print *,'entering block'
+  block
+    type(elastic_pointer) :: item1
+    type(elastic_allocatable) :: item2
+    allocate(item1%item_1d(3))
+    item1%item_1d = 123
+    print *,'item1%item_1d =', item1%item_1d
+    item2%item_1d = item1%item_1d
+    print *,'item2%item_1d =', item2%item_1d
+  end block
+  print *,'exited block'
+end subroutine
 
 subroutine sub1
   use module_016
@@ -90,6 +113,8 @@ subroutine sub1
   else
     print *,'item3%item_1d is not yet associated'
   endif
+
+! when this subroutine returns, item1, item2, item3, item4 will become "out of scope"
 
 end subroutine
 
@@ -135,4 +160,7 @@ subroutine sub2
   else
     print *,'item4%item_2d is not yet associated'
   endif
+
+! when this subroutine returns, item1, item2, item3, item4 will become "out of scope"
+
 end subroutine
