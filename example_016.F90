@@ -83,11 +83,11 @@ subroutine sub_block
     print *,'item1%item_1d =', item1%item_1d
     item2%item_1d = item1%item_1d
     print *,'item2%item_1d =', item2%item_1d
-  end block
+  end block  ! item1 and item2 from block now "out of scope"
   print *,'exited block'
-  item1%item_1d = [1]
+  item1%item_1d = [1]   ! implicit allocation for item1%item_1d (allocatable, not pointer item)
   print *,'exiting sub_block'
-end subroutine
+end subroutine ! item1 and item3 from subroutine now "out of scope"
 
 subroutine sub1
   use module_016
