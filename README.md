@@ -53,9 +53,18 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_013.F90 :  
 . passing a Fortran string to a C function (side effects)
 
+- example_014.F90 :  
+. ____
+
+- example_015.F90 :  
+. ____
+
+- example_015.F90 :  
+. gymnastics with allocatable arrays
+
 
 #### Contributors
 main code contributors :  
 - Philippe Carphin  (RPN-SI)  
-- Samuel Gilbert (RPN-SI)  
-- Michel Valin  (RPN-SI)  
+- Samuel Gilbert    (RPN-SI)  
+- Michel Valin      (RPN-SI)  
