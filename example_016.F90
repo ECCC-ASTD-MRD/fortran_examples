@@ -1,6 +1,7 @@
 ! gymnastics with allocatable arrays
 ! demonstrate the use of a finalization clause in a user defined type
-
+! useful reference about allocatable arrays and their properties :
+! https://fortran-lang.org/en/learn/best_practices/allocatable_arrays/
 module module_016
   implicit none
   private :: destruct_elastic_allocatable, destruct_elastic_pointer
