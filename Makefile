@@ -67,4 +67,4 @@ example_013:	example_013.F90 example_013_c.c
 	rm -f $@.exe *.mod
 
 clean:
-	rm -f *.o *.mod *.exe a.out
+	rm -f *.o *.mod *.exe a.out *.smod
