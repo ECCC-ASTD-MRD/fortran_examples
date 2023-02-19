@@ -54,13 +54,16 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 . passing a Fortran string to a C function (side effects)
 
 - example_014.F90 :  
-. ____
+. storage size in memory of user defined types with/out BIND(C) or SEQUENCE attribute
 
 - example_015.F90 :  
 . transfer data between C interoperable character(C_CHAR), dimension(nc1) and Fortran string character(len=nc2)
 
-- example_015.F90 :  
+- example_016.F90 :  
 . gymnastics with allocatable arrays
+
+- example_017.F90 :  
+. Fortran submodules and the file nomenclature that goes with them
 
 
 #### Contributors
