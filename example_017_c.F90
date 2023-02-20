@@ -13,6 +13,7 @@
 ! llvm       : module_017-submodule_017.mod  module_017.mod  module_017.smod  module_017@submodule_017.smod
 !
 ! nvhpc has a problem with the value attribute
+! aocc/flang has a problem with the value attribute
 program demo_017
   use module_017
   implicit none
