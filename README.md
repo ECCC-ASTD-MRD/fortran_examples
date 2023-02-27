@@ -65,6 +65,9 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_017.F90 :  
 . Fortran submodules and the file nomenclature that goes with them
 
+- example_018.F90 :  
+. Fortran modules : dealing with module cross-dependency
+
 
 #### Contributors
 main code contributors :  
