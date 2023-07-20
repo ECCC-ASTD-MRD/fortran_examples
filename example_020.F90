@@ -1,4 +1,5 @@
 ! example of passing Fortran optional arguments down the calling chain
+! inspired by code example from Michael Metcalf
 program optional
   implicit none
   interface
