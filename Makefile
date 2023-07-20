@@ -66,5 +66,29 @@ example_013:	example_013.F90 example_013_c.c
 	${FC} ${FFLAGS} ${DEF} example_013.F90 example_013_c.o -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod
 
+example_014:	example_014.F90
+	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
+example_015:	example_015.F90
+	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
+example_016:	example_016.F90
+	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
+example_017:	example_017_a.F90 example_017_b.F90 example_017_c.F90
+	${FC} ${FFLAGS} ${DEF} example_017_a.F90 example_017_b.F90 example_017_c.F90 -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
+example_018:	example_018.F90
+	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
+example_020:	example_020.F90
+	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
 clean:
 	rm -f *.o *.mod *.exe a.out *.smod

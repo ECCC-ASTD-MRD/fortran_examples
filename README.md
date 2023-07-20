@@ -71,9 +71,12 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_019.F90 :  
 . Fortran abstract interfaces and procedure pointers
 
+- example_020.F90 :  
+. passing Fortran optional arguments down the calling chain
 
 #### Contributors
-main code contributors :  
-- Philippe Carphin  (RPN-SI)  
-- Samuel Gilbert    (RPN-SI)  
-- Michel Valin      (RPN-SI)  
+main contributors :  
+- Philippe Carphin          (RPN-SI)  
+- Jean-Philippe Gauthier    (RPN-SI)  
+- Samuel Gilbert            (RPN-SI)  
+- Michel Valin               (RPN-SI)  
