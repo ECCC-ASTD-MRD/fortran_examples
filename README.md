@@ -74,9 +74,22 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_020.F90 :  
 . passing Fortran optional arguments down the calling chain
 
+- example_021.F90 :  
+. 
+
+- example_022.F90 :  
+. 
+
+- example_023.F90 :  
+. 
+
+- example_024.F90 :  
+. Fortran assumed size vs assumed shape vs assumed rank arrays
+
 #### Contributors
 main contributors :  
 - Philippe Carphin          (RPN-SI)  
 - Jean-Philippe Gauthier    (RPN-SI)  
 - Samuel Gilbert            (RPN-SI)  
-- Michel Valin               (RPN-SI)  
+- Vincent Magnoux           (RPN-SI)  
+- Michel Valin              (RPN-SI)  
