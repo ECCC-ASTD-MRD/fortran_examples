@@ -12,8 +12,12 @@
 ! nvhpc      : module_017-submodule_017.mod  module_017.mod  module_017.smod  module_017@submodule_017.smod
 ! llvm       : module_017-submodule_017.mod  module_017.mod  module_017.smod  module_017@submodule_017.smod
 !
-! nvhpc has a problem with the value attribute
-! aocc/flang has a problem with the value attribute
+! nvhpc has a problem with the value attribute when implicit none is used
+! aocc/flang has a problem with the value attribute when implicit none is used
+! run with
+! fortran_compiler example_017*.F90 -DWITH_VALUE && ./a.out
+! or
+! fortran_compiler example_017*.F90 -DWITH_VALUE -DNO_IMPNONE && ./a.out
 program demo_017
   use module_017
   implicit none
