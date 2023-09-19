@@ -111,7 +111,7 @@ end
 #if ! defined(NO_2018)
 subroutine assumed_rank(a, n, ref, nr, nd)
   use, intrinsic :: ISO_C_BINDING
-  use, intrinsic :: iso_fortran_env
+  use, intrinsic :: ISO_FORTRAN_ENV
   implicit none
   integer, intent(IN) :: n, nr, nd
   integer, dimension(..), target :: a     ! assumed rank
