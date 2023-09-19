@@ -4,6 +4,6 @@ do
  module unload gnu intel aocc nvhpc llvm 2>&1 >/dev/null
  module load $compiler 2>&1 >/dev/null
  echo "======================= $compiler ======================="
- $FCOMP "$@" && ./a.out
+ $FC "$@" && ./a.out
  rm -f ./a.out
 done
