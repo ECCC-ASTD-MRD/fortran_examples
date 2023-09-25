@@ -86,6 +86,9 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_024.F90 :  
 . Fortran assumed size vs assumed shape vs assumed rank arrays
 
+- example_026.F90 :  
+. possible syntax problem with usage of implicit none 
+
 #### Contributors
 main contributors :  
 - Philippe Carphin          (RPN-SI)  
