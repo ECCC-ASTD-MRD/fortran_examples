@@ -75,7 +75,7 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 . passing Fortran optional arguments down the calling chain
 
 - example_021.F90 :  
-. 
+. Compile error with gfortran only: name conflict between modules (when used in a derived type in a submodule)
 
 - example_022.F90 :  
 . 
