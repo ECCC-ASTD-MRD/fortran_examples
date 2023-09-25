@@ -8,7 +8,7 @@
 !  4. One of the procedures must be a subroutine, the other a function
 !  5. The procedures must be called on these 2 types (A and B) while they are members of a third derived type (type USER)
 !  6. The type-bound procedure from USER must be compiled in a submodule
-
+! NOTE: commenting the 3 private statements produces a different compilation error
 module type_a_module
   implicit none
   private
