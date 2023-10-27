@@ -92,6 +92,9 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_026.F90 :  
 . possible syntax problem with usage of implicit none 
 
+- example_027.F90 :  
+. passing a user defined type to C and receiving a user defined type as the function result
+
 #### Contributors
 main contributors :  
 - Philippe Carphin          (RPN-SI)  
