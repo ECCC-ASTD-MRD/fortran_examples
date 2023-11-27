@@ -95,6 +95,9 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_027.F90 :  
 . passing a user defined type to C and receiving a user defined type as the function result
 
+- example_028.F90 :  
+. implementing a Fortran 2023 feature with a macro using the BLOCK ... END BLOCK construct
+
 #### Contributors
 main contributors :  
 - Philippe Carphin          (RPN-SI)  
