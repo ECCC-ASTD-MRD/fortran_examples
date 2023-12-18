@@ -98,6 +98,9 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_028.F90 :  
 . implementing a Fortran 2023 feature with a macro using the BLOCK ... END BLOCK construct
 
+- example_029.F90 :  
+. C and Fortran cooperation using the threadprivate OpenMP feature
+
 #### Contributors
 main contributors :  
 - Philippe Carphin          (RPN-SI)  
