@@ -98,5 +98,9 @@ example_029:	example_029.F90 example_029_c.c
 	${CC} -c example_029_c.c ${OMP} && ${FC} ${FFLAGS} ${DEF} ${OMP} $< example_029_c.o -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod
 
+example_030:	example_030.F90
+	${FC} ${FFLAGS} ${DEF} ${OMP} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
 clean:
 	rm -f *.o *.mod *.exe a.out *.smod

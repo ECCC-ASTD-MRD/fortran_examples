@@ -101,6 +101,9 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_029.F90 :  
 . C and Fortran cooperation using the threadprivate OpenMP feature
 
+- example_030.F90 :  
+. Fortran argument dimension using an intrinsic function
+
 #### Contributors
 main contributors :  
 - Philippe Carphin          (RPN-SI)  
