@@ -90,6 +90,10 @@ example_020:	example_020.F90
 	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod
 
+example_022:	example_022.F90
+	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
 example_028:	example_028.F90
 	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod
