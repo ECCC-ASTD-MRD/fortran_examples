@@ -1,4 +1,4 @@
-! example of MPI Fortran code attempting to use error code returns
+! example of MPI Fortran code attempting to get error codes upon error
 ! MPICH and OpenMPI do not "react" in the same manner
 module mod_031
   implicit none

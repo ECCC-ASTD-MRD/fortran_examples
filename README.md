@@ -104,6 +104,9 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_030.F90 :  
 . Fortran argument dimension using an intrinsic function
 
+- example_031.F90 :  
+. MPI Fortran code attempting to get error codes upon error
+
 #### Contributors
 main contributors :  
 - Philippe Carphin          (RPN-SI)  
