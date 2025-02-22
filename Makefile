@@ -3,6 +3,12 @@ ifeq (${CC},)
 CC = gcc
 endif
 
+ifeq (${FC},ifx)
+ifeq (${TEST_FFLAGS},)
+TEST_FFLAGS = -fpe0
+endif
+endif
+
 CFLAGS =
 ifeq (${FC},f77)
 ifeq (${FTN},)
@@ -11,7 +17,7 @@ else
 FC = ${FTN}
 endif
 endif
-FFLAGS = ${FFLAGS_EXTRA} ${EXTRA_FFLAGS}
+FFLAGS = ${FFLAGS_EXTRA} ${EXTRA_FFLAGS} ${TEST_FFLAGS}
 DEFINES =
 
 example_001:	example_001.F90

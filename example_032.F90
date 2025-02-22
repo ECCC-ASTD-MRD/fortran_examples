@@ -1,3 +1,5 @@
+
+! plante avec l'option -fpe0 (intel ifx)
 program example_032
     implicit none
     integer ni,j

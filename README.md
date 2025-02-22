@@ -107,6 +107,12 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_031.F90 :  
 . MPI Fortran code attempting to get error codes upon error
 
+- example_032.F90 :  
+. Fortran code that aborts with some compiler options
+
+- example_033.F90 :  
+. Fortran code calling C with dimension(..)
+
 #### Contributors
 main contributors :  
 - Philippe Carphin          (RPN-SI)  
