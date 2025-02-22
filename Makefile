@@ -1,5 +1,8 @@
 
+ifeq (${CC},)
 CC = gcc
+endif
+
 CFLAGS =
 ifeq (${FC},f77)
 ifeq (${FTN},)
@@ -105,6 +108,19 @@ example_029:	example_029.F90 example_029_c.c
 example_030:	example_030.F90
 	${FC} ${FFLAGS} ${DEF} ${OMP} $< -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod
+
+example_031:	example_031.F90
+	mpif90 ${FFLAGS} ${DEF} ${OMP} $< -o $@.exe && mpirun -n 2 ./$@.exe
+	rm -f $@.exe *.mod
+
+example_032:	example_032.F90
+	${FC} ${FFLAGS} ${DEF} ${OMP} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
+example_033:	example_033.F90 rank_2018.c
+	${CC} -c rank_2018.c
+	${FC} ${FFLAGS} ${DEF} ${OMP} example_033.F90 rank_2018.o -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod rank_2018.o
 
 clean:
 	rm -f *.o *.mod *.exe a.out *.smod
