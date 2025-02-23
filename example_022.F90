@@ -1,4 +1,4 @@
-! example of use ot the atexit() functionality
+! example of use of the atexit() functionality
 program example_022
 use iso_c_binding
 implicit none

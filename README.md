@@ -78,7 +78,7 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 . Compile error with gfortran only: name conflict between modules (when used in a derived type in a submodule)
 
 - example_022.F90 :  
-. example of use ot the atexit() functionality
+. example of use of the atexit() functionality
 
 - example_023.F90 :  
 . 
