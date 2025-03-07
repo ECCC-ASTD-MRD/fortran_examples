@@ -128,5 +128,9 @@ example_033:	example_033.F90 rank_2018.c
 	${FC} ${FFLAGS} ${DEF} ${OMP} example_033.F90 rank_2018.o -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod rank_2018.o
 
+example_034:	example_034.F90
+	${FC} ${FFLAGS} ${DEF} ${OMP} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
 clean:
 	rm -f *.o *.mod *.exe a.out *.smod

@@ -113,6 +113,9 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_033.F90 :  
 . Fortran code calling C with dimension(..)
 
+- example_034.F90 :  
+. Fortran parameter declarations using intrinsic functions
+
 #### Contributors
 main contributors :  
 - Philippe Carphin          (RPN-SI)  
