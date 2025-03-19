@@ -132,5 +132,9 @@ example_034:	example_034.F90
 	${FC} ${FFLAGS} ${DEF} ${OMP} $< -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod
 
+example_035:	example_035.F90
+	${FC} ${FFLAGS} ${DEF} ${OMP} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
 clean:
 	rm -f *.o *.mod *.exe a.out *.smod

@@ -116,6 +116,9 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_034.F90 :  
 . Fortran parameter declarations using intrinsic functions
 
+- example_035.F90 :  
+. access to user defined type properties from function result and array member
+
 #### Contributors
 main contributors :  
 - Philippe Carphin          (RPN-SI)  
