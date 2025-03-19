@@ -26,5 +26,5 @@ program example_035
   print *, r
   a = f_ex35()
   print *, a(1)%i1, a(2)%c3
-  i = f_ex35()%i1
+  i = f_ex35()%i1  ! this is invalid
 end
