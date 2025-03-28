@@ -119,6 +119,9 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_035.F90 :  
 . access to user defined type properties from function result and array member
 
+- example_036.F90 :  
+. unsigned arithmetic, binary format descriptor, adaptive field length format descriptor
+
 #### Contributors
 main contributors :  
 - Philippe Carphin          (RPN-SI)  
