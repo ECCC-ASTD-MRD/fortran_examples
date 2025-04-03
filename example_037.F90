@@ -11,7 +11,12 @@ module module_037
 contains
   subroutine sub_037(what, is_integer)
     implicit none
+#if defined(__FLANG)
+!DIR$ ignore_tkr what
+    logical, dimension(*) , target :: what
+#else
     type(*), dimension(*), target, intent(INOUT) :: what
+#endif
     logical, intent(IN), value :: is_integer
     type(C_PTR) :: cptr
     integer, dimension(:), pointer :: ip
