@@ -122,8 +122,11 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_036.F90 :  
 . unsigned arithmetic, binary format descriptor, adaptive field length format descriptor
 
-- example_036.F90 :  
+- example_037.F90 :  
 . demonstration of C void * in Fortran
+
+- example_038.F90 :  
+. there are sums ... and there is SUM()
 
 #### Contributors
 main contributors :  

@@ -20,6 +20,9 @@ endif
 FFLAGS = ${FFLAGS_EXTRA} ${EXTRA_FFLAGS} ${TEST_FFLAGS}
 DEFINES =
 
+utilities.o:	utilities.c
+	${CC} -c utilities.c
+
 example_001:	example_001.F90
 	${FC} ${FFLAGS} ${DEF} $< -o $@.exe && ./$@.exe
 	rm -f $@.exe
@@ -142,6 +145,10 @@ example_036:	example_036.F90
 
 example_037:	example_037.F90
 	${FC} ${FFLAGS} ${DEF} ${OMP} $< -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
+example_038:	example_038.F90 utilities.o
+	${FC} ${FFLAGS} ${DEF} ${OMP} $< utilities.o -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod
 
 clean:
