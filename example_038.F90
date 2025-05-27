@@ -22,10 +22,6 @@ program example_038
   implicit none
   integer, parameter :: NI = 8192, NJ = 8192
   interface
-    function getrss() result(amount) bind(C,name='get_rss')
-      import C_INT64_T
-      integer(C_INT64_T) :: amount
-    end function
     function my_rand_f() result(r) bind(C,name='my_rand_f')
       import C_FLOAT
       real(C_FLOAT) :: r
@@ -33,7 +29,6 @@ program example_038
   end interface
   real, dimension(NI,NJ) :: z
   real(kind=4) :: z8, z4, z0, zs
-  integer, allocatable :: seed(:)
   integer :: n, i, j
   real(kind=4), external :: sum4, sum0
   real(kind=8), external :: sum8
