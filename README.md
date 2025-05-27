@@ -126,7 +126,7 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 . demonstration of C void * in Fortran
 
 - example_038.F90 :  
-. there are sums ... and there is SUM()
+. there are sums ... and there is SUM() ... optimization dependent
 
 #### Contributors
 main contributors :  

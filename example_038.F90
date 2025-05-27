@@ -4,13 +4,18 @@
 !  (deviation from .5)   , sum = .352E-05  , z4  = .894E-07  , z8  = .596E-07  , z0  = .596E-07 (-O2)
 !  (deviation from .5)   , sum = .250E+00  , z4  = .250E+00  , z8  = .596E-07  , z0  = .596E-07 (-O0) (-O1)
 ! gnu/14
-!  (deviation from .5)   , sum = .250E+00  , z4  = .250E+00  , z8  = .596E-07  , z0  = .596E-07
+!  (deviation from .5)   , sum = .250E+00  , z4  = .250E+00  , z8  = .596E-07  , z0  = .596E-07 (-O2)
+!  (deviation from .5)   , sum = .250E+00  , z4  = .250E+00  , z8  = .596E-07  , z0  = .596E-07 (-O0) (-O1)
 ! aoccc/5.0.0
-!  (deviation from .5)   , sum = .250E+00  , z4  = .250E+00  , z8  = .596E-07  , z0  = .596E-07
+!  (deviation from .5)   , sum = .250E+00  , z4  = .250E+00  , z8  = .596E-07  , z0  = .596E-07 (-O2)
+!  (deviation from .5)   , sum = .250E+00  , z4  = .250E+00  , z8  = .596E-07  , z0  = .596E-07 (-O0) (-O1)
 ! Nvidia/PGI/25.5
-!  (deviation from .5)   , sum = .119E-06  , z4  = .119E-06  , z8  = .596E-07  , z0  = .596E-07
+!  (deviation from .5)   , sum = .119E-06  , z4  = .119E-06  , z8  = .596E-07  , z0  = .596E-07 (-O2)
+!  (deviation from .5)   , sum = .250E+00  , z4  = .250E+00  , z8  = .596E-07  , z0  = .596E-07 (-O0) (-O1)
 ! llvm flang/20
-!  (deviation from .5)   , sum = .596E-07  , z4  = .250E+00  , z8  = .596E-07  , z0  = .596E-07
+!  (deviation from .5)   , sum = .596E-07  , z4  = .250E+00  , z8  = .596E-07  , z0  = .596E-07 (-O2)
+!  (deviation from .5)   , sum = .250E+00  , z4  = .250E+00  , z8  = .596E-07  , z0  = .596E-07 (-O1)
+!  (deviation from .5)   , sum = .596E-07  , z4  = .250E+00  , z8  = .596E-07  , z0  = .596E-07 (-O0)
 !
 program example_038
   use ISO_C_BINDING
