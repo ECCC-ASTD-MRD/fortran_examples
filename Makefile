@@ -151,5 +151,9 @@ example_038:	example_038.F90 utilities.o
 	${FC} ${FFLAGS} ${DEF} ${OMP} $< utilities.o -o $@.exe && ./$@.exe
 	rm -f $@.exe *.mod
 
+example_039:	example_039.F90 utilities.o
+	${FC} ${FFLAGS} ${DEF} ${OMP} $< utilities.o -o $@.exe && ./$@.exe
+	rm -f $@.exe *.mod
+
 clean:
 	rm -f *.o *.mod *.exe a.out *.smod
