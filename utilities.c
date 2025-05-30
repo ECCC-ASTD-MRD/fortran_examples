@@ -15,10 +15,17 @@ uint32_t my_rand_i(){
   return my_seed ;         // [0 , 0xFFFFFFFF] range
 }
 
-float my_rand_f(){
+float my_rand_f(){          // linear distribution
   union { uint32_t u ; float f ; } uf ;
   uf.u = my_rand_i() ;
   uf.u &= 0x7FFFFF ;        // keep lower 23 bits
   uf.u |= (127 << 23) ;     // [1.0 , 2.0) range
   return (uf.f - 1.0f) ;    // [0.0 , 1.0) range
+}
+
+float my_rand_fexp(){       // exponential distribution
+  union { uint32_t u ; float f ; } uf ;
+  uf.u = my_rand_i() ;
+  uf.u &= 0x3FFFFFFF ;      // keep lower 30 bits
+  return uf.f * .5f ;       // [0.0 , 1.0) range
 }

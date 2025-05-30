@@ -23,6 +23,7 @@ program example_038
   integer, parameter :: NI = 8192, NJ = 8192
   interface
     function my_rand_f() result(r) bind(C,name='my_rand_f')
+!     function my_rand_f() result(r) bind(C,name='my_rand_fexp')
       import C_FLOAT
       real(C_FLOAT) :: r
     end function
@@ -44,14 +45,14 @@ program example_038
   enddo
   if(sum(dist(0:9)) .ne. ni*nj) stop
   print '(A,11I8)', 'dist =',dist
-  zs = ABS(sum(z)/(ni*nj)-.5)
-  z8 = ABS(sum8(z,NI*NJ)/(ni*nj)-.5)
-  z4 = ABS(sum4(z,NI*NJ)/(ni*nj)-.5)
-  z0 = ABS(sum0(z,NI*NJ)/(ni*nj)-.5)
-  print 1, 'example_038 (deviation from .5) ',&
+  z8 = ABS(sum8(z,NI*NJ)/(ni*nj))
+  zs = ABS(sum(z)/(ni*nj)-z8)
+  z4 = ABS(sum4(z,NI*NJ)/(ni*nj)-z8)
+  z0 = ABS(sum0(z,NI*NJ)/(ni*nj)-z8)
+  print 1, 'example_038 : deviation from ', z8,&
            ', sum = ', zs,', z4  = ', z4,&
-           ', z8  = ', z8,', z0  = ', z0
-1 format (A,4(2X,A,E8.3))
+           ', z0  = ', z0
+1 format (5(A,E10.3))
 end program
 ! DUMB sum
 real(kind=4) function sum4(f, n)
