@@ -59,7 +59,9 @@ contains
 end module
 
 program example_016
+  use module_016
   implicit none
+  type(elastic_pointer), pointer :: machin
   call sub0
   print *,'=================================='
   call sub1
@@ -67,6 +69,14 @@ program example_016
   call sub2
   print *,'=================================='
   call sub_block
+  print *,'=================================='
+  print *,'allocating machin and sub components'
+  allocate(machin)
+  allocate(machin%item_1d(3))
+  allocate(machin%item_2d(2,3))
+  print *,'deallocating machin'
+  deallocate(machin)
+  print *,'machin deallocated'
   print *,'=================================='
   stop
 end program
