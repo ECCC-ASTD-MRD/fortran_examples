@@ -38,6 +38,7 @@ contains
     else
       print *,'no need to deallocate allocatable component item_2d'
     endif
+    print *,'elastic_allocatable type finalized'
   end subroutine
 
   subroutine destruct_elastic_pointer(this)
@@ -55,6 +56,7 @@ contains
     else
       print *,'no need to deallocate unassociated pointer component item_2d'
     endif
+    print *,'elastic_pointer type finalized'
   end subroutine
 end module
 
