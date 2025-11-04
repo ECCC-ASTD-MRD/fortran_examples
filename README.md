@@ -128,8 +128,11 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 - example_038.F90 :  
 . there are sums ... and there is SUM() ... optimization dependent
 
-- example_038.F90 :  
+- example_039.F90 :  
 . allocation, deallocation, test for memory leaks
+
+- example_040.F90 :  
+. about strings and null character terminator (or their absence)
 
 #### Contributors
 main contributors :  
