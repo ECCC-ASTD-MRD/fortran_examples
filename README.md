@@ -132,7 +132,13 @@ these sample codes have been tested with various Fortran compilers on an x86 pla
 . allocation, deallocation, test for memory leaks
 
 - example_040.F90 :  
-. about strings and null character terminator (or their absence)
+. about strings and null character terminator (or its absence)
+
+- example_041.F90 :  
+. importing symbols from modules
+
+- example_042.F90 :  
+. writing into strings using / format element
 
 #### Contributors
 main contributors :  
