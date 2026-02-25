@@ -23,7 +23,7 @@ contains
 #if defined(__PGI)
 !   bad behavior with type(*)
     if(expected == 0) then
-      print *, 'WARNING, skipping Fortran rank length test for rank 0'
+      print *, 'WARNING, skipping Fortran rank and length test for rank 0'
       return
     endif
 #endif
