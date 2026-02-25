@@ -73,13 +73,14 @@ program test_strings
   endif
 
 ! multi line write into a string
+! string array and / in format
   array_string = 'empty'         ! initialize all elements to 'empty'
   write(array_string,2) 'line 1', 'line 2', 'line 3', 'line 4', 'line 5'
   print '(A)', '--------------------------  array   -----------------------'
   do i=1,size(array_string)
     print 3, i, "'" // array_string(i) // "'"
   enddo
-
+! scalar string and new_line() intrinsic
   long_string = 'line 1' // new_line(' ') // 'line 2' // new_line(' ') // 'line 3' // new_line(' ') // &
                 'line 4' // new_line(' ') // 'line 5'
   print '(A)', '--------------------------  as is   -----------------------'
@@ -92,7 +93,7 @@ program test_strings
   print '(A)', "'" // adjustl(long_string) // "'"
 
 1 format("string = '",A,"'")
-2 format(8(A,:,/))
+2 format(8(A,:,/))      ! : prevents a "newline" after the last IO item (forces same behavior for all compilers)
 3 format(I1,2X,A)
 end
 
